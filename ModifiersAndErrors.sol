@@ -31,5 +31,4 @@ contract ModifiersAndErrors {
     return secret;
   }
 
-
 }
