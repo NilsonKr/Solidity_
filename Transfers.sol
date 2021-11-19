@@ -14,8 +14,8 @@ contract Transfers {
     return response;
   }
 
-  function transferWithCall(address _to, uint ammount) public returns (bool) {
+  function transferWithCall(address _to, uint ammount) public returns (bool, bytes memory) {
     (bool response, bytes memory data) = payable(_to).call{value: ammount}("");
-    return response;
+    return (response, data);
   }
 } 
